@@ -33,4 +33,14 @@ class Ticket extends \Doctrine\ORM\EntityRepository
 
         return $this->_em->getRepository('App\Entity\Ticket')->matching($criteria)->first();
     }
+
+    public function notDisplayed()
+    {
+        $criteria = Criteria::create();
+        $criteria
+            ->where(Criteria::expr()->eq('displayedAt', null));
+
+        return $this->_em->getRepository('App\Entity\Ticket')->matching($criteria);
+    }
+
 }

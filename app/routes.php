@@ -6,3 +6,5 @@ $app->get('/box/info/{id}', 'App\Action\BoxAction:info')->setName('box.info');
 $app->post('/box/next/{id}', 'App\Action\BoxAction:next')->setName('box.next');
 $app->post('/box/previous/{id}', 'App\Action\BoxAction:previous')->setName('box.previous');
 $app->post('/box/refresh/{id}', 'App\Action\BoxAction:refresh')->setName('box.refresh');
+$app->get('/box/tickets', 'App\Action\BoxAction:tickets')->setName('box.tickets');
+$app->post('/box/tickets/display', 'App\Action\BoxAction:display')->setName('box.tickets.display');

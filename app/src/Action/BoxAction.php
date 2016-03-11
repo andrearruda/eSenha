@@ -13,6 +13,25 @@ final class BoxAction
 {
     private $view, $logger, $entity_manager;
 
+    private function disableTickets(\App\Entity\Box $box, \App\Entity\TicketType $ticket_type)
+    {
+        $criteria = Criteria::create();
+        $criteria
+            ->where(Criteria::expr()->eq('box', $box))
+            ->andWhere(Criteria::expr()->eq('ticketType', $ticket_type))
+            ->andWhere(Criteria::expr()->eq('displayedAt', null));
+
+        $entities = $this->entity_manager->getRepository('App\Entity\Ticket')->matching($criteria);
+
+        foreach($entities as $entity)
+        {
+            $entity->setDisplayedAt(new \DateTime("now"));
+            $this->entity_manager->persist($entity);
+        }
+
+        $this->entity_manager->flush();
+    }
+
     public function __construct(Twig $view, LoggerInterface $logger, EntityManager $entity_manager)
     {
         $this->view = $view;
@@ -62,25 +81,6 @@ final class BoxAction
         }
 
         return $response->withJson($data)->withHeader('Content-Type', 'application/json');
-    }
-
-    private function disableTickets(\App\Entity\Box $box, \App\Entity\TicketType $ticket_type)
-    {
-        $criteria = Criteria::create();
-        $criteria
-            ->where(Criteria::expr()->eq('box', $box))
-            ->andWhere(Criteria::expr()->eq('ticketType', $ticket_type))
-            ->andWhere(Criteria::expr()->eq('displayedAt', null));
-
-        $entities = $this->entity_manager->getRepository('App\Entity\Ticket')->matching($criteria);
-
-        foreach($entities as $entity)
-        {
-            $entity->setDisplayedAt(new \DateTime("now"));
-            $this->entity_manager->persist($entity);
-        }
-
-        $this->entity_manager->flush();
     }
 
     public function next(Request $request, Response $response, $args)
@@ -224,6 +224,35 @@ final class BoxAction
 
             unset($data['tickets'][$key]['ticket_type']['created_at'], $data['tickets'][$key]['ticket_type']['updated_at'], $data['tickets'][$key]['ticket_type']['deleted_at']);
         }
+
+        return $response->withJson($data)->withHeader('Content-Type', 'application/json');
+    }
+
+    public function tickets(Request $request, Response $response, $args)
+    {
+        $data = $this->entity_manager->getRepository('App\Entity\Ticket')->notDisplayed()->toArray();
+
+        $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
+        $data = $serializer->serialize($data, 'xml');
+
+        $body = $response->getBody();
+        $body->write($data);
+
+        return $response->withBody($body)->withHeader('Content-type', 'application/xml');
+    }
+
+    public function display(Request $request, Response $response, $args)
+    {
+        $ticket_id = $request->getParam('ticket_id');
+        $ticket = $this->entity_manager->getRepository('App\Entity\Ticket')->findOneById($ticket_id);
+        $ticket->setDisplayedAt(new \DateTime("now"));
+
+        $this->entity_manager->persist($ticket);
+        $this->entity_manager->flush();
+
+        $data = [
+            'box' => $ticket
+        ];
 
         return $response->withJson($data)->withHeader('Content-Type', 'application/json');
     }
