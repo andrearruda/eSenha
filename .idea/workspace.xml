@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac793594-a77a-4bc3-9226-149f1bc03104" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home.twig" afterPath="$PROJECT_DIR$/app/templates/home.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="slim3_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -30,8 +28,10 @@
         <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.6007067">
-              <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
-              <folding />
+              <caret line="176" column="26" selection-start-line="176" selection-start-column="26" selection-end-line="176" selection-end-column="26" />
+              <folding>
+                <element signature="e#6071#6580#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -420,8 +420,10 @@
     <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6007067">
-          <caret line="176" column="20" selection-start-line="176" selection-start-column="20" selection-end-line="176" selection-end-column="20" />
-          <folding />
+          <caret line="176" column="26" selection-start-line="176" selection-start-column="26" selection-end-line="176" selection-end-column="26" />
+          <folding>
+            <element signature="e#6071#6580#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
