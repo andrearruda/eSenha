@@ -41,11 +41,6 @@
                         {
                             moment.locale('pt-br');
 
-                            $('.box_display #number_' + json.box.id).val(json.tickets[0].number);
-                            $('.box_display #type_' + json.box.id).html(json.tickets[0].ticket_type.type);
-
-                            json.tickets.shift();
-
                             $('#lastfiveTemplate').tmpl(json.tickets).appendTo('#box_lastfive_' + json.box.id);
                             $('#box_lastfive_' + json.box.id + ' span.timeago').html(moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').fromNow());
                             $('#box_lastfive_' + json.box.id + ' span.timeago').attr({
@@ -89,8 +84,6 @@
                     var ticket_type_id = $('#box_ticket_type_' + box_id).val();
                     var url = '{{ base_url() }}/box/previous/' + box_id;
 
-                    console.log(url);
-
                     $.ajax({
                         type: "post",
                         url: url,
@@ -108,8 +101,6 @@
                     var box_id = $(this).parent().data('box-id');
                     var ticket_type_id = $('#box_ticket_type_' + box_id).val();
                     var url = '{{ base_url() }}/box/refresh/' + box_id;
-
-                    console.log(url);
 
                     $.ajax({
                         type: "post",
@@ -164,6 +155,15 @@
                 margin-top: 20px;
                 display: block;
             }
+
+            .ticket_type_label_next{
+                margin: 0px;
+                background-color: #000000;
+                color: #FFFFFF;
+                font-size: 12px;
+                display: block;
+                padding: 5px;
+            }
         </style>
         <!-- CUSTOM -->
 
@@ -189,7 +189,12 @@
             </div>
             <div class="row">
                 <div class="col-md-12 text-center">
-                    <span class="ticket_type_number_next" id="display_next_{{ ticket_type.id }}">{{ ticket_type.number_next }}</span>
+                    <span class="ticket_type_number_next" id="display_next_{{ ticket_type.id }}">
+                        {{ ticket_type.number_next }}
+                    </span>
+                    <span class="ticket_type_label_next">
+                        PRÓXIMO
+                    </span>
                 </div>
             </div>
         </div>
@@ -206,21 +211,6 @@
                     <p class="text-center">{{ box.getName() }}</p>
                 </div>
             </div>
-
-            <div class="box_display">
-                <div class="row">
-                    <div class="col-md-12">
-                        <input type="text" class="form-control text-center box_display_number" id="number_{{ box.getId() }}" value="--"  disabled>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-12 text-center">
-                        <span class="box_display_type" id="type_{{ box.getId() }}">--</span>
-                    </div>
-                </div>
-            </div>
-
-            <hr class="divider">
 
             <div class="row">
                 <div class="col-md-12 text-center">
