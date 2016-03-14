@@ -10,8 +10,8 @@
 
         <script src="/libs/jquery-tmpl/jquery.tmpl.min.js"></script>
 
-        <script src="/libs/jquery-timeago/jquery.timeago.js"></script>
-        <script src="/libs/jquery-timeago/locales/jquery.timeago.pt-br.js"></script>
+        <script src="/libs/Moment/moment.js"></script>
+        <script src="/libs/Moment/moment-with-locales.js"></script>
 
 
         <script type="application/javascript">
@@ -39,14 +39,19 @@
 
                         if(json.tickets)
                         {
+                            moment.locale('pt-br');
+
                             $('.box_display #number_' + json.box.id).val(json.tickets[0].number);
                             $('.box_display #type_' + json.box.id).html(json.tickets[0].ticket_type.type);
 
                             json.tickets.shift();
 
                             $('#lastfiveTemplate').tmpl(json.tickets).appendTo('#box_lastfive_' + json.box.id);
-
-                            $('#box_lastfive_' + json.box.id + ' time.timeago').timeago();
+                            $('#box_lastfive_' + json.box.id + ' span.timeago').html(moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').fromNow());
+                            $('#box_lastfive_' + json.box.id + ' span.timeago').attr({
+                                alt: moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').format('DD/MM/YYYY HH:mm'),
+                                title: moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').format('DD/MM/YYYY HH:mm')
+                            });
                         }
                     },
                     complete: function(){
@@ -135,8 +140,10 @@
                 font-size: 11px;
             }
 
-            .box_lastfive li time.box_lastfive_date{
+            .box_lastfive li span.box_lastfive_date{
                 color: #999999;
+                cursor: help;
+                display: inline-block;
             }
 
             .box_lastfive li:first-child span.box_lastfive_number, .box_lastfive li:first-child span.box_lastfive_type
@@ -167,7 +174,7 @@
     <li>
         <p>
             <span class="box_lastfive_number">${number}</span> - <span class="box_lastfive_type">${ticket_type.type}</span><br />
-            <time class="box_lastfive_date timeago" datetime="${created_at.date}">${created_at.date}</time>
+            <span class="box_lastfive_date timeago" title="" alt="">${created_at.date}</span>
         </p>
     </li>
 </script>
