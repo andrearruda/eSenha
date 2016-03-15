@@ -3,7 +3,7 @@
 
 // e.g: $app->add(new \Slim\Csrf\Guard);
 
-use \Slim\Middleware\HttpBasicAuthentication\AuthenticatorInterface;
+/*use \Slim\Middleware\HttpBasicAuthentication\AuthenticatorInterface;
 $app->add(new \Slim\Middleware\HttpBasicAuthentication([
     'path' => ['/'],
     'realm' => 'eSENHA',
@@ -11,4 +11,4 @@ $app->add(new \Slim\Middleware\HttpBasicAuthentication([
     'users' => [
         'farolnet' => '293143'
     ]
-]));
+]));*/
