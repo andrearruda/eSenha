@@ -1,257 +1,67 @@
 {% extends "base.twig" %}
-{% set title = ["Gerenciador"]|join(' / ') %}
+{% set title = ["Home"]|join(' / ') %}
 {% block title %}{{ title }}{% endblock %}
 {% block head %}
 {{ parent() }}
-
         <!-- CUSTOM -->
-        <link href="/libs/bootstrap-select-1.10.0/dist/css/bootstrap-select.min.css" rel='stylesheet' type='text/css'>
-        <script src="/libs/bootstrap-select-1.10.0/dist/js/bootstrap-select.min.js"></script>
-
-        <script src="/libs/jquery-tmpl/jquery.tmpl.min.js"></script>
-
-        <script src="/libs/Moment/moment.js"></script>
-        <script src="/libs/Moment/moment-with-locales.js"></script>
-
+        <link href="/css/home.css" rel='stylesheet' type='text/css'>
 
         <script type="application/javascript">
-            var timer = 0;
+            $(document).ready(function() {
+                $('.main-option button').click(function(){
+                    $('#ticket_type_id').attr('disabled', 'disabled');
+                    $('#box_id').attr('disabled', 'disabled');
 
-            function boxInfo(url)
-            {
-                var _url = '{{ base_url() }}' + url;
-
-                $.ajax({
-                    type: "GET",
-                    url: _url,
-                    dataType: "json",
-                    cache: false,
-                    success: function(json){
-                        $('#box_lastfive_' + json.box.id + ' li').remove();
-
-                        for(var i = 0; i < json.ticket_type.entity.length; i++)
-                        {
-                            $('#display_next_' + json.ticket_type.entity[i].id).html(json.ticket_type.entity[i].number_next);
-                        }
-
-
-                        $('#display_next_' + json.ticket_type.id).html(json.ticket_type.number_next);
-
-                        if(json.tickets)
-                        {
-                            moment.locale('pt-br');
-
-                            $.each(json.tickets, function(index, ticket) {
-                                ticket.created_at.human = moment(ticket.created_at.date, 'YYYY-MM-DD hh:mm:ss').fromNow();
-                                ticket.created_at.formatted = moment(ticket.created_at.date, 'YYYY-MM-DD hh:mm:ss').format('DD/MM/YYYY HH:mm');
-
-                                $('#lastfiveTemplate').tmpl(ticket).appendTo('#box_lastfive_' + json.box.id);
-                            });
-                        }
-                    },
-                    complete: function(){
-                        timer = setTimeout("boxInfo('" + url + "')", 30000);
-                    },
-                });
-            }
-
-
-            $( document ).ready(function() {
-                $('.selectpicker').selectpicker({
-                    width: '130px'
-                });
-
-                $('.btn-next').click(function(){
-                    var box_id = $(this).parent().data('box-id');
-                    var ticket_type_id = $('#box_ticket_type_' + box_id).val();
-                    var url = '{{ base_url() }}/box/next/' + box_id;
-
-                    $.ajax({
-                        type: "post",
-                        url: url,
-                        dataType: "json",
-                        data: {ticket_type: ticket_type_id},
-                        cache: false,
-                        success: function(json){
-                        },
-                        complete: function(){
-                        }
-                    });
-                });
-
-                $('.btn-previous').click(function(){
-                    var box_id = $(this).parent().data('box-id');
-                    var ticket_type_id = $('#box_ticket_type_' + box_id).val();
-                    var url = '{{ base_url() }}/box/previous/' + box_id;
-
-                    $.ajax({
-                        type: "post",
-                        url: url,
-                        dataType: "json",
-                        data: {ticket_type: ticket_type_id},
-                        cache: false,
-                        success: function(json){
-                        },
-                        complete: function(){
-                        }
-                    });
-                });
-
-                $('.btn-refresh').click(function(){
-                    var box_id = $(this).parent().data('box-id');
-                    var ticket_type_id = $('#box_ticket_type_' + box_id).val();
-                    var url = '{{ base_url() }}/box/refresh/' + box_id;
-
-                    $.ajax({
-                        type: "post",
-                        url: url,
-                        dataType: "json",
-                        data: {ticket_type: ticket_type_id},
-                        cache: false,
-                        success: function(json){
-                        },
-                        complete: function(){
-                        }
-                    });
-                });
+                    window.location.href = '/box/' + $('#ticket_type_id').val() + '/' + $('#box_id').val();
+                })
             });
         </script>
-        <style type="text/css">
-            .box_name p{
-                font-weight: bold;
-                font-size: 18px;
-            }
-
-            .box_display .box_display_type{
-                font-weight: bold;
-                color: #999999;
-            }
-
-            .box_lastfive li {
-                font-size: 11px;
-            }
-
-            .box_lastfive li span.box_lastfive_date{
-                color: #999999;
-                cursor: help;
-                display: inline-block;
-            }
-
-            .box_lastfive li:first-child span.box_lastfive_number, .box_lastfive li:first-child span.box_lastfive_type
-            {
-                font-size: 14px;
-                font-weight: bold;
-            }
-
-            .ticket_type_name{
-                font-size: 20px;
-                font-weight: bold;;
-            }
-
-            .ticket_type_number_next{
-                font-size: 20px;
-                padding: 10px;
-                border: solid 1px;
-                margin-top: 20px;
-                display: block;
-            }
-
-            .ticket_type_label_next{
-                margin: 0px;
-                background-color: #000000;
-                color: #FFFFFF;
-                font-size: 12px;
-                display: block;
-                padding: 5px;
-            }
-        </style>
         <!-- CUSTOM -->
-
 {% endblock %}
 {% block content %}
 
-<script id="lastfiveTemplate" type="text/x-jquery-tmpl">
-    <li>
-        <p>
-            <span class="box_lastfive_number">${number}</span> - <span class="box_lastfive_type">${ticket_type.type}</span><br />
-            <span class="box_lastfive_date timeago" title="${created_at.formatted}" alt="${created_at.formatted}">${created_at.human}</span>
-        </p>
-    </li>
-</script>
-
-    <div class="row">
-        {% for ticket_type in ticket_types.entity %}
-        <div class="col-xs-6 col-sm-6">
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <span class="ticket_type_name">{{ ticket_type.type }}</span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <span class="ticket_type_number_next" id="display_next_{{ ticket_type.id }}">
-                        {{ ticket_type.number_next }}
-                    </span>
-                    <span class="ticket_type_label_next">
-                        PRÓXIMO
-                    </span>
-                </div>
-            </div>
+    <div class="row header-descrpition">
+        <div class="col-md-4 col-md-offset-4">
+            <h1>GUICHÊ</h1>
+            <h2>SELECIONE UM A</h2>
+            <h3>ABAIXO.</h3>
         </div>
-        {% endfor %}
     </div>
 
-    <hr class="divider">
+    <hr />
 
-    <div class="row">
-{% for box in boxs %}
-        <div class="col-md-2">
-            <div class="row box_name">
-                <div class="col-md-12">
-                    <p class="text-center">{{ box.getName() }}</p>
-                </div>
-            </div>
+    <div class="row main-option">
+        <div class="col-md-6 col-xs-6 text-center">
+            <label for=""ticket_type_id>TIPO</label>
 
             <div class="row">
-                <div class="col-md-12 text-center">
-                    <div class="btn-group" role="group" aria-label="..." data-box-id="{{ box.getId() }}">
-                        <button type="button" class="btn btn-default btn-previous">
-                            <i class="fa fa-chevron-left"></i>
-                        </button>
-                        <button type="button" class="btn btn-default btn-refresh">
-                            <i class="fa fa-refresh"></i>
-                        </button>
-                        <button type="button" class="btn btn-default btn-next">
-                            <i class="fa fa-chevron-right"></i>
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-md-12 text-center">
-                    <select class="selectpicker" id="box_ticket_type_{{ box.getId() }}">
-                        {% for ticket_type in ticket_types.entity %}
-                            <option value="{{ ticket_type.id }}">{{ ticket_type.type }}</option>
+                <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <select id="ticket_type_id" name="ticket_type_id" class="form-control">
+                        {% for ticket_type in ticket_types %}
+                            <option value="{{ ticket_type.getId() }}">{{ ticket_type.getType() }}</option>
                         {% endfor %}
                     </select>
                 </div>
             </div>
-
-            <hr class="divider">
-
-            <div class="row">
-                <div class="col-md-12">
-                    <ul class="list-unstyled box_lastfive" id="box_lastfive_{{ box.getId() }}">
-                    </ul>
-                </div>
-            </div>
-
         </div>
 
-        <script type="application/javascript">
-            boxInfo('{{ path_for('box.info', {'id' : box.getId()}) }}');
-        </script>
-{% endfor %}
+        <div class="col-md-6 col-xs-6 text-center">
+            <label for=""ticket_type_id>GUICHÊ</label>
+
+            <div class="row">
+                <div class="col-xs-12 col-md-6 col-md-offset-3">
+                    <select id="box_id" name="box_id" class="form-control">
+                        {% for box in boxs %}
+                            <option value="{{ box.getId() }}">{{ box.getName() }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12 col-xs-12 text-center">
+            <button type="button" class="btn btn-default btn-lg">OK</button>
+        </div>
     </div>
+
 {% endblock %}

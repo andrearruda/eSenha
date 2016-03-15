@@ -1,0 +1,49 @@
+.header-descrpition h1{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 40px;
+}
+
+.header-descrpition h2{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: -12px;
+    text-transform: uppercase;
+}
+
+
+.header-subdescrpition h1{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.header-subdescrpition h2{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 20px;
+    margin-top: -5px;
+    text-transform: uppercase;
+}
+
+.header-subdescrpition ul{
+    margin-top: 10px;
+}
+
+.header-subdescrpition ul li{
+    border-bottom: dotted 1px;
+    padding: 5px 0px;
+    font-family: 'Lato';
+    font-size: 40px;
+    font-weight: 700;
+    color: #999999;
+}
+
+.header-subdescrpition ul li span{
+    cursor: pointer;
+}

@@ -1,0 +1,75 @@
+{% extends "base.twig" %}
+{% set title = ["Box", ticket_type.getType(), box.getName()]|join(' / ') %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+        <!-- CUSTOM -->
+        <link href="/css/box.index.css" rel='stylesheet' type='text/css'>
+
+        <script type="application/javascript">
+            $(document).ready(function() {
+                $('[data-toggle="tooltip"]').tooltip();
+
+                $('.btn-previous').click(function(){
+                    window.location.href = '{{ path_for('box.selected.previous', {'ticket_type_id' : ticket_type.getId(), 'box_id' : box.getId()}) }}';
+                });
+
+                $('.btn-refresh').click(function(){
+                    window.location.href = '{{ path_for('box.selected.refresh', {'ticket_type_id' : ticket_type.getId(), 'box_id' : box.getId()}) }}';
+                });
+
+                $('.btn-next').click(function(){
+                    window.location.href = '{{ path_for('box.selected.next', {'ticket_type_id' : ticket_type.getId(), 'box_id' : box.getId()}) }}';
+                });
+            });
+        </script>
+        <!-- CUSTOM -->
+{% endblock %}
+{% block content %}
+
+    <div class="row header-descrpition">
+        <div class="col-md-12 text-center">
+            <h1>{{ ticket_type.getType() }}</h1>
+            <h2>{{ box.getName() }}</h2>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12 text-center">
+
+            <div class="btn-group" role="group" aria-label="...">
+                <button type="button" class="btn btn-default btn-lg btn-previous" data-toggle="tooltip" data-placement="top" title="Anterior">
+                    <i class="fa fa-chevron-left"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-lg btn-refresh" data-toggle="tooltip" data-placement="top" title="Rechamar">
+                    <i class="fa fa-refresh"></i>
+                </button>
+                <button type="button" class="btn btn-default btn-lg btn-next" data-toggle="tooltip" data-placement="top" title="Próxima">
+                    <i class="fa fa-chevron-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row header-subdescrpition">
+        <div class="col-md-12 text-center">
+            <h1>últimas senhas</h1>
+            <h2>chamadas</h2>
+        </div>
+        <div class="col-md-4 col-md-offset-4">
+            <ul class="list-unstyled box_lastfive">
+    {% for ticket in ticket_last_five %}
+                <li class="text-center">
+                    <span title="{{ ticket.getCreatedAt()|date("d/m/Y H:i", false) }}" data-toggle="tooltip" data-placement="top">{{ ticket.getNumber() }}</span>
+                </li>
+    {% endfor %}
+            </ul>
+        </div>
+    </div>
+
+{% endblock %}

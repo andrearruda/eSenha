@@ -12,11 +12,12 @@ use Doctrine\Common\Collections\Criteria;
  */
 class Ticket extends \Doctrine\ORM\EntityRepository
 {
-    public function lastFiveTicket(\App\Entity\Box $box)
+    public function lastFiveTicketBox(\App\Entity\Box $box, \App\Entity\TicketType $ticket_type)
     {
         $criteria = Criteria::create();
         $criteria
             ->where(Criteria::expr()->eq('box', $box))
+            ->andWhere(Criteria::expr()->eq('ticketType', $ticket_type))
             ->setMaxResults(5)
             ->orderBy(array('createdAt' => Criteria::DESC));
 

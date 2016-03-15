@@ -2,7 +2,377 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac793594-a77a-4bc3-9226-149f1bc03104" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/Action/BoxAction.old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/Action/HomeAction.old.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/src/Action/TicketAction.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/box.index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/box.index.twig" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/css/home.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/templates/home.old.twig" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\Moment\moment-with-locales.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\Moment\moment.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\Gruntfile.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\LICENSE" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\css\bootstrap-select.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\css\bootstrap-select.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\css\bootstrap-select.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\bootstrap-select.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\bootstrap-select.js.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\bootstrap-select.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ar_AR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ar_AR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-bg_BG.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-bg_BG.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-cro_CRO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-cro_CRO.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-cs_CZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-cs_CZ.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-da_DK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-da_DK.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-de_DE.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-de_DE.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-en_US.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-en_US.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-es_CL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-es_CL.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-eu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-eu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-fa_IR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-fa_IR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-fi_FI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-fi_FI.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-fr_FR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-fr_FR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-hu_HU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-hu_HU.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-id_ID.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-id_ID.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-it_IT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-it_IT.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ko_KR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ko_KR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-lt_LT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-lt_LT.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-nb_NO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-nb_NO.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-nl_NL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-nl_NL.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-pl_PL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-pl_PL.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-pt_BR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-pt_PT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-pt_PT.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ro_RO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ro_RO.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ru_RU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ru_RU.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-sk_SK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-sk_SK.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-sl_SI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-sl_SI.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-sv_SE.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-sv_SE.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-tr_TR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-tr_TR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ua_UA.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-ua_UA.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-zh_CN.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\dist\js\i18n\defaults-zh_TW.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\base.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\css\base.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\img\logos\membermeister.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\img\logos\snapappointments.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\img\logos\thermofisher.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\js\base.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\nav.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\custom_theme\toc.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\css\custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\css\bootstrap-select.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\css\bootstrap-select.css.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\css\bootstrap-select.min.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\bootstrap-select.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\bootstrap-select.js.map" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\bootstrap-select.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ar_AR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ar_AR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-bg_BG.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-bg_BG.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-cro_CRO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-cro_CRO.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-cs_CZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-cs_CZ.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-da_DK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-da_DK.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-de_DE.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-de_DE.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-en_US.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-en_US.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-es_CL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-es_CL.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-eu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-eu.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-fa_IR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-fa_IR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-fi_FI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-fi_FI.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-fr_FR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-fr_FR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-hu_HU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-hu_HU.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-id_ID.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-id_ID.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-it_IT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-it_IT.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ko_KR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ko_KR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-lt_LT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-lt_LT.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-nb_NO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-nb_NO.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-nl_NL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-nl_NL.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-pl_PL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-pl_PL.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-pt_BR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-pt_PT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-pt_PT.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ro_RO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ro_RO.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ru_RU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ru_RU.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-sk_SK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-sk_SK.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-sl_SI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-sl_SI.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-sv_SE.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-sv_SE.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-tr_TR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-tr_TR.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ua_UA.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-ua_UA.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-zh_CN.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\dist\js\i18n\defaults-zh_TW.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\examples.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\index.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\methods.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\docs\options.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\docs\mkdocs.yml" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\.jshintrc" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\bootstrap-select.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-ar_AR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-bg_BG.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-cro_CRO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-cs_CZ.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-da_DK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-de_DE.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-en_US.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-es_CL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-eu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-fa_IR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-fi_FI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-fr_FR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-hu_HU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-id_ID.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-it_IT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-ko_KR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-lt_LT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-nb_NO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-nl_NL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-pl_PL.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-pt_BR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-pt_PT.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-ro_RO.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-ru_RU.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-sk_SK.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-sl_SI.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-sv_SE.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-tr_TR.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-ua_UA.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-zh_CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\js\i18n\defaults-zh_TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\less\bootstrap-select.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\less\variables.less" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\sass\bootstrap-select.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\sass\variables.scss" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\bootstrap-select-1.10.0\test.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\CNAME" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\CONTRIBUTING.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\LICENSE.txt" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\README.markdown" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\Rakefile" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\bower.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\clock.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\composer.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\contrib\timeago-koext.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\jquery.timeago.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.af.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ar.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.bg.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.bs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ca.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.cs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.cy.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.da.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.de.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.dv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.el.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.en-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.en.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.es-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.es.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.et.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.eu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.fa-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.fa.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.fi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.fr-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.fr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.gl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.he.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.hr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.hu.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.hy.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.id.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.is.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.it-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.it.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ja.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.jv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ko.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ky.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.lt.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.lv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.mk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.nl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.no.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.pl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.pt-br-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.pt-br.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.pt-short.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.pt.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ro.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.rs.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.ru.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.rw.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.si.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.sk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.sl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.sr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.sv.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.th.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.tr.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.uk.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.uz.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.vi.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.zh-CN.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\locales\jquery.timeago.zh-TW.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\package.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\test\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\test\test_helpers.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-timeago\timeago.jquery.json" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\.gitignore" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\README.md" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\PagesCore\movies.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\PagesCore\moviesNoGlobals.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\PagesTmplPlus\movies1.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\PagesTmplPlus\movies2.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\PagesTmplPlus\movies3.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\components\jquery-ui-1.8.1.custom.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\components\jquery-ui-1.8.1.custom.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\components\jquery.pager.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\css\jquery-ui-1.8.1.custom.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\css\movies.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_dots-small_65_a6a6a6_2x2.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_flat_0_333333_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_flat_65_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_flat_75_ffffff_40x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_glass_55_fbf8ee_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_glass_75_dadada_1x400.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-bg_highlight-soft_15_cc0000_1x100.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-icons_004276_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-icons_cc0000_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\movies\images\ui-icons_ffffff_256x240.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\resources\demos.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\resources\movielist.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\resources\syntaxhighlighter.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\resources\syntaxhighlighter.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\resources\collapsed.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\resources\empty.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\resources\expanded.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\resources\folder.png" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\resources\tabs.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\resources\treeView.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\tabsTmpl.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\tabsWrap.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\tabsWrapImperative.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\tabsWrapNested.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\Interactive\treeView.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\basic.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\composition.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\conditional.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\each.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesCore\parameters.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesTmplPlus\basic.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesTmplPlus\composition.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\samplesTmplPlus\parameters.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\0_local-data-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\0_local-data.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\1_remote-data-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\1_remote-data.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\2_html-tag-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\2_html-tag.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\3_if-else-tag-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\3_if-else-tag.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\4_each-tag-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\4_each-tag.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\5_javascript-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\5_javascript.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\6_hierarchical-data-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\0_tmpl-read-only\6_hierarchical-data.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\1_tmpl-interactive\0_accordion-switching-template-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\1_tmpl-interactive\0_accordion-switching-template.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\1_tmpl-interactive\1_tree-view-using-tmpl-tag-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\1_tmpl-interactive\1_tree-view-using-tmpl-tag.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\1_tmpl-interactive\2_tabs-using-wrap-tag-source.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\demos\step-by-step\1_tmpl-interactive\2_tabs-using-wrap-tag.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\jquery.tmpl.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\jquery.tmpl.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\jquery.tmplPlus.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\jquery.tmplPlus.min.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\tests\core.js" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\tests\index.html" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\tests\qunit.css" afterPath="" />
+      <change type="DELETED" beforePath="D:\DEV\eSenha\public\libs\jquery-tmpl\tests\qunit.js" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Action/BoxAction.php" afterPath="$PROJECT_DIR$/app/src/Action/BoxAction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Action/HomeAction.php" afterPath="$PROJECT_DIR$/app/src/Action/HomeAction.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/src/Repository/Ticket.php" afterPath="$PROJECT_DIR$/app/src/Repository/Ticket.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/base.twig" afterPath="$PROJECT_DIR$/app/templates/base.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/dependencies.php" afterPath="$PROJECT_DIR$/app/dependencies.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home.twig" afterPath="$PROJECT_DIR$/app/templates/home.twig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/middleware.php" afterPath="$PROJECT_DIR$/app/middleware.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/routes.php" afterPath="$PROJECT_DIR$/app/routes.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/css/style.css" afterPath="$PROJECT_DIR$/public/css/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="slim3_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -24,23 +394,53 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="home.twig" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
+      <file leaf-file-name="TicketAction.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/Action/TicketAction.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43678162">
-              <caret line="176" column="111" selection-start-line="176" selection-start-column="111" selection-end-line="176" selection-end-column="111" />
+            <state vertical-scroll-proportion="0.8045977">
+              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
-                <element signature="e#2329#2383#0#HTML" expanded="false" />
-                <element signature="e#2434#3083#0#HTML" expanded="false" />
-                <element signature="e#3138#3791#0#HTML" expanded="false" />
-                <element signature="e#3845#4497#0#HTML" expanded="false" />
-                <element signature="e#4542#5863#0#HTML" expanded="false" />
+                <element signature="e#29#49#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="routes.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/routes.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.5">
+              <caret line="13" column="34" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="34" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="BoxAction.old.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.old.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-22.346153">
+              <caret line="247" column="8" selection-start-line="247" selection-start-column="8" selection-end-line="256" selection-end-column="90" />
+              <folding>
+                <element signature="e#368#1036#0#PHP" expanded="false" />
+                <element signature="e#1042#1260#0#PHP" expanded="false" />
+                <element signature="e#1266#3268#0#PHP" expanded="false" />
+                <element signature="e#3274#5133#0#PHP" expanded="false" />
+                <element signature="e#5139#7002#0#PHP" expanded="false" />
+                <element signature="e#7008#9115#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -51,14 +451,21 @@
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/app/settings.php" />
         <option value="$PROJECT_DIR$/public/index.php" />
-        <option value="$PROJECT_DIR$/app/dependencies.php" />
-        <option value="$PROJECT_DIR$/app/src/Action/HomeAction.php" />
         <option value="$PROJECT_DIR$/app/src/Repository/Box.php" />
-        <option value="$PROJECT_DIR$/app/src/Repository/Ticket.php" />
         <option value="$PROJECT_DIR$/app/src/Entity/Box.php" />
-        <option value="$PROJECT_DIR$/app/routes.php" />
-        <option value="$PROJECT_DIR$/app/src/Action/BoxAction.php" />
+        <option value="$PROJECT_DIR$/app/middleware.php" />
+        <option value="$PROJECT_DIR$/app/src/Action/HomeAction.php" />
+        <option value="$PROJECT_DIR$/app/templates/base.twig" />
+        <option value="$PROJECT_DIR$/public/css/home.css" />
         <option value="$PROJECT_DIR$/app/templates/home.twig" />
+        <option value="$PROJECT_DIR$/public/css/style.css" />
+        <option value="$PROJECT_DIR$/app/src/Repository/Ticket.php" />
+        <option value="$PROJECT_DIR$/app/src/Action/BoxAction.php" />
+        <option value="$PROJECT_DIR$/public/css/box.index.css" />
+        <option value="$PROJECT_DIR$/app/templates/box.index.twig" />
+        <option value="$PROJECT_DIR$/app/dependencies.php" />
+        <option value="$PROJECT_DIR$/app/routes.php" />
+        <option value="$PROJECT_DIR$/app/src/Action/TicketAction.php" />
       </list>
     </option>
   </component>
@@ -144,15 +551,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Moment" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -166,11 +565,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
+              <option name="myItemId" value="templates" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim3_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eSenha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Repository" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim3_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eSenha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="slim3_test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="eSenha" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Action" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -184,6 +645,13 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="FullScreen" value="false" />
     <property name="last_opened_file_path" value="Z:/farol_sign/conteudo.farolsign.com.br/servicos/instagram/v1" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\DEV\eSenha\app\src\Action" />
+      <recent name="D:\DEV\eSenha\app\templates" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
@@ -227,7 +695,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27132195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -283,50 +751,32 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="3" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
+    <entry file="file://$PROJECT_DIR$/app/templates/home.old.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2329#2383#0#HTML" expanded="false" />
-            <element signature="e#2434#3083#0#HTML" expanded="false" />
-            <element signature="e#3138#3791#0#HTML" expanded="false" />
-            <element signature="e#3845#4497#0#HTML" expanded="false" />
-            <element signature="e#4542#5863#0#HTML" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
+    <entry file="file://$PROJECT_DIR$/app/templates/home.old.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2329#2383#0#HTML" expanded="false" />
-            <element signature="e#2434#3083#0#HTML" expanded="false" />
-            <element signature="e#3138#3791#0#HTML" expanded="false" />
-            <element signature="e#3845#4497#0#HTML" expanded="false" />
-            <element signature="e#4542#5863#0#HTML" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
+    <entry file="file://$PROJECT_DIR$/app/templates/home.old.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#2329#2383#0#HTML" expanded="false" />
-            <element signature="e#2434#3083#0#HTML" expanded="false" />
-            <element signature="e#3138#3791#0#HTML" expanded="false" />
-            <element signature="e#3845#4497#0#HTML" expanded="false" />
-            <element signature="e#4542#5863#0#HTML" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -337,7 +787,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.php">
+    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -351,14 +801,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.php">
+    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
+    <entry file="file://$PROJECT_DIR$/app/templates/home.old.twig">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -372,7 +822,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.php">
+    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -400,7 +850,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.php">
+    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.old.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -435,41 +885,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/settings.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.09770115">
-          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/dependencies.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8436782">
-          <caret line="72" column="35" selection-start-line="72" selection-start-column="35" selection-end-line="72" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/libs/jquery-tmpl/demos/samplesCore/basic.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="25.5">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Action/HomeAction.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6486797">
-          <caret line="44" column="27" selection-start-line="44" selection-start-column="27" selection-end-line="44" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/templates/base.twig">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Repository/TicketType.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -491,20 +906,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Repository/Ticket.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7760141">
-          <caret line="36" column="32" selection-start-line="36" selection-start-column="20" selection-end-line="36" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/composer.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.83950615">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/Entity/Ticket.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="2.0384614">
@@ -519,30 +920,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.php">
+    <entry file="file://$PROJECT_DIR$/app/settings.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7324914">
-          <caret line="249" column="46" selection-start-line="249" selection-start-column="46" selection-end-line="249" selection-end-column="46" />
+        <state vertical-scroll-proportion="0.09770115">
+          <caret line="5" column="37" selection-start-line="5" selection-start-column="37" selection-end-line="5" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/routes.php">
+    <entry file="file://$PROJECT_DIR$/app/middleware.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.17566016">
-          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        <state vertical-scroll-proportion="0.21494253">
+          <caret line="11" column="18" selection-start-line="11" selection-start-column="18" selection-end-line="11" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/composer.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5471264">
+          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/base.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.01954023">
+          <caret line="12" column="64" selection-start-line="12" selection-start-column="60" selection-end-line="12" selection-end-column="64" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43678162">
-          <caret line="176" column="111" selection-start-line="176" selection-start-column="111" selection-end-line="176" selection-end-column="111" />
+        <state vertical-scroll-proportion="-5.8846154">
+          <caret line="9" column="42" selection-start-line="9" selection-start-column="12" selection-end-line="9" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.05691964">
+          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home.old.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.090909">
+          <caret line="135" column="16" selection-start-line="135" selection-start-column="16" selection-end-line="136" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/home.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.43638393">
+          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Repository/Ticket.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.37126437">
+          <caret line="19" column="52" selection-start-line="19" selection-start-column="52" selection-end-line="19" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.74252874">
+          <caret line="80" column="31" selection-start-line="80" selection-start-column="31" selection-end-line="80" selection-end-column="31" />
           <folding>
-            <element signature="e#2329#2383#0#HTML" expanded="false" />
-            <element signature="e#2434#3083#0#HTML" expanded="false" />
-            <element signature="e#3138#3791#0#HTML" expanded="false" />
-            <element signature="e#3845#4497#0#HTML" expanded="false" />
-            <element signature="e#4542#5863#0#HTML" expanded="false" />
+            <element signature="e#29#49#0#PHP" expanded="true" />
+            <element signature="e#1347#2401#0#PHP" expanded="false" />
+            <element signature="e#3462#4512#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/css/box.index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8917411">
+          <caret line="47" column="20" selection-start-line="47" selection-start-column="20" selection-end-line="47" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/box.index.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1367816">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/dependencies.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-30.846153">
+          <caret line="76" column="38" selection-start-line="76" selection-start-column="38" selection-end-line="76" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Action/HomeAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42988506">
+          <caret line="22" column="73" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="73" />
+          <folding>
+            <element signature="e#29#49#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Action/HomeAction.old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.254023">
+          <caret line="24" column="81" selection-start-line="24" selection-start-column="8" selection-end-line="24" selection-end-column="81" />
+          <folding>
+            <element signature="e#369#587#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/routes.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.5">
+          <caret line="13" column="34" selection-start-line="13" selection-start-column="25" selection-end-line="13" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Action/BoxAction.old.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-22.346153">
+          <caret line="247" column="8" selection-start-line="247" selection-start-column="8" selection-end-line="256" selection-end-column="90" />
+          <folding>
+            <element signature="e#368#1036#0#PHP" expanded="false" />
+            <element signature="e#1042#1260#0#PHP" expanded="false" />
+            <element signature="e#1266#3268#0#PHP" expanded="false" />
+            <element signature="e#3274#5133#0#PHP" expanded="false" />
+            <element signature="e#5139#7002#0#PHP" expanded="false" />
+            <element signature="e#7008#9115#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/Action/TicketAction.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8045977">
+          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+          <folding>
+            <element signature="e#29#49#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>

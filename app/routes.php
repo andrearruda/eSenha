@@ -2,9 +2,14 @@
 // Routes
 
 $app->get('/', App\Action\HomeAction::class)->setName('homepage');
-$app->get('/box/info/{id}', 'App\Action\BoxAction:info')->setName('box.info');
-$app->post('/box/next/{id}', 'App\Action\BoxAction:next')->setName('box.next');
-$app->post('/box/previous/{id}', 'App\Action\BoxAction:previous')->setName('box.previous');
-$app->post('/box/refresh/{id}', 'App\Action\BoxAction:refresh')->setName('box.refresh');
-$app->get('/box/tickets', 'App\Action\BoxAction:tickets')->setName('box.tickets');
-$app->post('/box/tickets/display', 'App\Action\BoxAction:display')->setName('box.tickets.display');
+$app->group('/box/{ticket_type_id}/{box_id}', function(){
+    $this->get('', 'App\Action\BoxAction:index')->setName('box.selected');
+    $this->get('/previous', 'App\Action\BoxAction:previous')->setName('box.selected.previous');
+    $this->get('/refresh', 'App\Action\BoxAction:refresh')->setName('box.selected.refresh');
+    $this->get('/next', 'App\Action\BoxAction:next')->setName('box.selected.next');
+});
+
+$app->group('/ticket', function(){
+    $this->get('/opened', 'App\Action\TicketAction:opened')->setName('ticket.opened');
+    $this->get('/showed/{ticket_id}', 'App\Action\TicketAction:showed')->setName('ticket.showed');
+});

@@ -2,6 +2,7 @@
 namespace App\Action;
 
 use Slim\Views\Twig;
+use Slim\Router;
 use Doctrine\ORM\EntityManager;
 use Doctrine\Common\Collections\Criteria;
 use Zend\Hydrator\ClassMethods;
@@ -11,131 +12,37 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 final class BoxAction
 {
-    private $view, $logger, $entity_manager;
+    private $view, $logger, $entity_manager, $router;
 
-    private function disableTickets(\App\Entity\Box $box, \App\Entity\TicketType $ticket_type)
-    {
-        $criteria = Criteria::create();
-        $criteria
-            ->where(Criteria::expr()->eq('box', $box))
-            ->andWhere(Criteria::expr()->eq('ticketType', $ticket_type))
-            ->andWhere(Criteria::expr()->eq('displayedAt', null));
-
-        $entities = $this->entity_manager->getRepository('App\Entity\Ticket')->matching($criteria);
-
-        foreach($entities as $entity)
-        {
-            $entity->setDisplayedAt(new \DateTime("now"));
-            $this->entity_manager->persist($entity);
-        }
-
-        $this->entity_manager->flush();
-    }
-
-    public function __construct(Twig $view, LoggerInterface $logger, EntityManager $entity_manager)
+    public function __construct(Twig $view, LoggerInterface $logger, EntityManager $entity_manager, Router $router)
     {
         $this->view = $view;
         $this->logger = $logger;
         $this->entity_manager = $entity_manager;
+        $this->router = $router;
     }
 
-    public function info(Request $request, Response $response, $args)
+    public function index(Request $request, Response $response, $args)
     {
-        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($args['id']);
-        $tickets = $this->entity_manager->getRepository('App\Entity\Ticket')->lastFiveTicket($box);
-        $ticket_types = $this->entity_manager->getRepository('App\Entity\TicketType')->findAll();
-
-        $data = [
-            'box' => (new ClassMethods())->extract($box),
-            'ticket_type' => [
-                'cols' => floor(12 / count($ticket_types))
-            ]
-        ];
-
-        foreach($ticket_types as $key => $ticket_type)
-        {
-            $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->lastTicketType($ticket_type);
-
-            if($ticket_last)
-            {
-                $number = $ticket_last->getNumber() + 1;
-            }
-            else
-            {
-                $number = 1;
-            }
-
-            $data['ticket_type']['entity'][$key] = (new ClassMethods())->extract($ticket_type);
-            $data['ticket_type']['entity'][$key]['number_next'] = $number;
-            unset($data['ticket_type']['entity'][$key]['created_at'], $data['ticket_type']['entity'][$key]['updated_at'], $data['ticket_type']['entity'][$key]['deleted_at']);
-        }
-
-        unset($data['box']['created_at'], $data['box']['updated_at'], $data['box']['deleted_at']);
-
-        foreach($tickets as $key => $ticket)
-        {
-            $data['tickets'][$key] = (new ClassMethods())->extract($ticket);
-            $data['tickets'][$key]['ticket_type'] = (new ClassMethods())->extract($ticket->getTicketType());
-            unset($data['tickets'][$key]['deleted_at'], $data['tickets'][$key]['box']);
-            unset($data['tickets'][$key]['ticket_type']['created_at'], $data['tickets'][$key]['ticket_type']['updated_at'], $data['tickets'][$key]['ticket_type']['deleted_at']);
-        }
-
-        return $response->withJson($data)->withHeader('Content-Type', 'application/json');
-    }
-
-    public function next(Request $request, Response $response, $args)
-    {
-        $ticket_type_id = $request->getParam('ticket_type');
-        $box_id = $args['id'];
-
-        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($box_id);
-        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($ticket_type_id);
-        $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->lastTicketType($ticket_type);
-
-        $this->disableTickets($box, $ticket_type);
-
-        $number = empty($ticket_last) ? 0 : $ticket_last->getNumber();
+        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($args['box_id']);
+        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($args['ticket_type_id']);
+        $ticket_last_five = $this->entity_manager->getRepository('App\Entity\Ticket')->lastFiveTicketBox($box, $ticket_type);
 
         $data = [
             'box' => $box,
-            'ticketType' => $ticket_type,
-            'number' => $number + 1
+            'ticket_type' => $ticket_type,
+            'ticket_last_five' => $ticket_last_five
         ];
 
-        $entity = (new \App\Entity\Ticket());
+        $this->view->render($response, 'box.index.twig', $data);
+        return $response;
 
-        (new ClassMethods())->hydrate($data, $entity);
-
-        $this->entity_manager->persist($entity);
-        $this->entity_manager->flush();
-
-        $tickets = $this->entity_manager->getRepository('App\Entity\Ticket')->lastFiveTicket($entity->getBox());
-
-        $data = [
-            'box' => (new ClassMethods())->extract($entity),
-        ];
-
-        unset($data['box']['created_at'], $data['box']['updated_at'], $data['box']['deleted_at']);
-
-        foreach($tickets as $key => $ticket)
-        {
-            $data['tickets'][$key] = (new ClassMethods())->extract($ticket);
-            $data['tickets'][$key]['ticket_type'] = (new ClassMethods())->extract($ticket->getTicketType());
-            unset($data['tickets'][$key]['deleted_at'], $data['tickets'][$key]['box']);
-
-            unset($data['tickets'][$key]['ticket_type']['created_at'], $data['tickets'][$key]['ticket_type']['updated_at'], $data['tickets'][$key]['ticket_type']['deleted_at']);
-        }
-
-        return $response->withJson($data)->withHeader('Content-Type', 'application/json');
     }
 
     public function previous(Request $request, Response $response, $args)
     {
-        $ticket_type_id = $request->getParam('ticket_type');
-        $box_id = $args['id'];
-
-        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($box_id);
-        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($ticket_type_id);
+        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($args['box_id']);
+        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($args['ticket_type_id']);
         $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->lastTicketType($ticket_type);
 
         $this->disableTickets($box, $ticket_type);
@@ -155,41 +62,14 @@ final class BoxAction
         $this->entity_manager->persist($entity);
         $this->entity_manager->flush();
 
-        $tickets = $this->entity_manager->getRepository('App\Entity\Ticket')->lastFiveTicket($entity->getBox());
-
-        $data = [
-            'box' => (new ClassMethods())->extract($entity),
-        ];
-
-        unset($data['box']['created_at'], $data['box']['updated_at'], $data['box']['deleted_at']);
-
-        foreach($tickets as $key => $ticket)
-        {
-            $data['tickets'][$key] = (new ClassMethods())->extract($ticket);
-            $data['tickets'][$key]['ticket_type'] = (new ClassMethods())->extract($ticket->getTicketType());
-            unset($data['tickets'][$key]['deleted_at'], $data['tickets'][$key]['box']);
-
-            unset($data['tickets'][$key]['ticket_type']['created_at'], $data['tickets'][$key]['ticket_type']['updated_at'], $data['tickets'][$key]['ticket_type']['deleted_at']);
-        }
-
-        return $response->withJson($data)->withHeader('Content-Type', 'application/json');
+        return $response->withStatus(301)->withHeader('Location', $this->router->pathFor('box.selected', ['ticket_type_id' => $args['ticket_type_id'], 'box_id' => $args['box_id']]));
     }
 
     public function refresh(Request $request, Response $response, $args)
     {
-        $ticket_type_id = $request->getParam('ticket_type');
-        $box_id = $args['id'];
-
-        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($box_id);
-        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($ticket_type_id);
-
-        $criteria = Criteria::create();
-        $criteria
-            ->where(Criteria::expr()->eq('box', $box))
-            ->andWhere(Criteria::expr()->eq('ticketType', $ticket_type))
-            ->orderBy(array('createdAt' => Criteria::DESC));
-
-        $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->matching($criteria)->first();
+        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($args['box_id']);
+        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($args['ticket_type_id']);
+        $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->lastTicketType($ticket_type);
 
         $this->disableTickets($box, $ticket_type);
 
@@ -208,52 +88,51 @@ final class BoxAction
         $this->entity_manager->persist($entity);
         $this->entity_manager->flush();
 
-        $tickets = $this->entity_manager->getRepository('App\Entity\Ticket')->lastFiveTicket($entity->getBox());
+        return $response->withStatus(301)->withHeader('Location', $this->router->pathFor('box.selected', ['ticket_type_id' => $args['ticket_type_id'], 'box_id' => $args['box_id']]));
+    }
+
+    public function next(Request $request, Response $response, $args)
+    {
+        $box = $this->entity_manager->getRepository('App\Entity\Box')->findOneById($args['box_id']);
+        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findOneById($args['ticket_type_id']);
+        $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->lastTicketType($ticket_type);
+
+        $this->disableTickets($box, $ticket_type);
+
+        $number = empty($ticket_last) ? 0 : $ticket_last->getNumber();
 
         $data = [
-            'box' => (new ClassMethods())->extract($entity),
+            'box' => $box,
+            'ticketType' => $ticket_type,
+            'number' => $number + 1
         ];
 
-        unset($data['box']['created_at'], $data['box']['updated_at'], $data['box']['deleted_at']);
+        $entity = (new \App\Entity\Ticket());
 
-        foreach($tickets as $key => $ticket)
-        {
-            $data['tickets'][$key] = (new ClassMethods())->extract($ticket);
-            $data['tickets'][$key]['ticket_type'] = (new ClassMethods())->extract($ticket->getTicketType());
-            unset($data['tickets'][$key]['deleted_at'], $data['tickets'][$key]['box']);
+        (new ClassMethods())->hydrate($data, $entity);
 
-            unset($data['tickets'][$key]['ticket_type']['created_at'], $data['tickets'][$key]['ticket_type']['updated_at'], $data['tickets'][$key]['ticket_type']['deleted_at']);
-        }
-
-        return $response->withJson($data)->withHeader('Content-Type', 'application/json');
-    }
-
-    public function tickets(Request $request, Response $response, $args)
-    {
-        $data = $this->entity_manager->getRepository('App\Entity\Ticket')->notDisplayed()->toArray();
-
-        $serializer = \JMS\Serializer\SerializerBuilder::create()->build();
-        $data = $serializer->serialize($data, 'xml');
-
-        $body = $response->getBody();
-        $body->write($data);
-
-        return $response->withBody($body)->withHeader('Content-type', 'application/xml');
-    }
-
-    public function display(Request $request, Response $response, $args)
-    {
-        $ticket_id = $request->getParam('ticket_id');
-        $ticket = $this->entity_manager->getRepository('App\Entity\Ticket')->findOneById($ticket_id);
-        $ticket->setDisplayedAt(new \DateTime("now"));
-
-        $this->entity_manager->persist($ticket);
+        $this->entity_manager->persist($entity);
         $this->entity_manager->flush();
 
-        $data = [
-            'box' => $ticket
-        ];
+        return $response->withStatus(301)->withHeader('Location', $this->router->pathFor('box.selected', ['ticket_type_id' => $args['ticket_type_id'], 'box_id' => $args['box_id']]));
+    }
 
-        return $response->withJson($data)->withHeader('Content-Type', 'application/json');
+    private function disableTickets(\App\Entity\Box $box, \App\Entity\TicketType $ticket_type)
+    {
+        $criteria = Criteria::create();
+        $criteria
+            ->where(Criteria::expr()->eq('box', $box))
+            ->andWhere(Criteria::expr()->eq('ticketType', $ticket_type))
+            ->andWhere(Criteria::expr()->eq('displayedAt', null));
+
+        $entities = $this->entity_manager->getRepository('App\Entity\Ticket')->matching($criteria);
+
+        foreach($entities as $entity)
+        {
+            $entity->setDisplayedAt(new \DateTime("now"));
+            $this->entity_manager->persist($entity);
+        }
+
+        $this->entity_manager->flush();
     }
 }

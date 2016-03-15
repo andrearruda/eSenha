@@ -23,32 +23,12 @@ final class HomeAction
     public function __invoke(Request $request, Response $response, $args)
     {
         $box = $this->entity_manager->getRepository('App\Entity\Box')->findAll();
-        $ticket_types = $this->entity_manager->getRepository('App\Entity\TicketType')->findAll();
+        $ticket_type = $this->entity_manager->getRepository('App\Entity\TicketType')->findAll();
 
         $data = [
             'boxs' => $box,
-            'ticket_types' => [
-                'cols' => floor(12 / count($ticket_types))
-            ]
+            'ticket_types' => $ticket_type
         ];
-
-        foreach($ticket_types as $key => $ticket_type)
-        {
-            $ticket_last = $this->entity_manager->getRepository('App\Entity\Ticket')->lastTicketType($ticket_type);
-
-            if($ticket_last)
-            {
-                $number = $ticket_last->getNumber() + 1;
-            }
-            else
-            {
-                $number = 1;
-            }
-
-            $data['ticket_types']['entity'][$key] = (new ClassMethods())->extract($ticket_type);
-            $data['ticket_types']['entity'][$key]['number_next'] = $number;
-            unset($data['ticket_types']['entity'][$key]['created_at'], $data['ticket_types']['entity'][$key]['updated_at'], $data['ticket_types']['entity'][$key]['deleted_at']);
-        }
 
         $this->view->render($response, 'home.twig', $data);
         return $response;
