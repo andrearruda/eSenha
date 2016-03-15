@@ -41,11 +41,11 @@
                         {
                             moment.locale('pt-br');
 
-                            $('#lastfiveTemplate').tmpl(json.tickets).appendTo('#box_lastfive_' + json.box.id);
-                            $('#box_lastfive_' + json.box.id + ' span.timeago').html(moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').fromNow());
-                            $('#box_lastfive_' + json.box.id + ' span.timeago').attr({
-                                alt: moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').format('DD/MM/YYYY HH:mm'),
-                                title: moment(json.tickets[0].created_at.date, 'YYYY-MM-DD hh:mm:ss').format('DD/MM/YYYY HH:mm')
+                            $.each(json.tickets, function(index, ticket) {
+                                ticket.created_at.human = moment(ticket.created_at.date, 'YYYY-MM-DD hh:mm:ss').fromNow();
+                                ticket.created_at.formatted = moment(ticket.created_at.date, 'YYYY-MM-DD hh:mm:ss').format('DD/MM/YYYY HH:mm');
+
+                                $('#lastfiveTemplate').tmpl(ticket).appendTo('#box_lastfive_' + json.box.id);
                             });
                         }
                     },
@@ -174,7 +174,7 @@
     <li>
         <p>
             <span class="box_lastfive_number">${number}</span> - <span class="box_lastfive_type">${ticket_type.type}</span><br />
-            <span class="box_lastfive_date timeago" title="" alt="">${created_at.date}</span>
+            <span class="box_lastfive_date timeago" title="${created_at.formatted}" alt="${created_at.formatted}">${created_at.human}</span>
         </p>
     </li>
 </script>

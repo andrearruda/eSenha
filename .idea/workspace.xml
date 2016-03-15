@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="ac793594-a77a-4bc3-9226-149f1bc03104" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/templates/home.twig" afterPath="$PROJECT_DIR$/app/templates/home.twig" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="slim3_test.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,9 +27,15 @@
       <file leaf-file-name="home.twig" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.77922076">
-              <caret line="164" column="28" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
-              <folding />
+            <state vertical-scroll-proportion="0.43678162">
+              <caret line="176" column="111" selection-start-line="176" selection-start-column="111" selection-end-line="176" selection-end-column="111" />
+              <folding>
+                <element signature="e#2329#2383#0#HTML" expanded="false" />
+                <element signature="e#2434#3083#0#HTML" expanded="false" />
+                <element signature="e#3138#3791#0#HTML" expanded="false" />
+                <element signature="e#3845#4497#0#HTML" expanded="false" />
+                <element signature="e#4542#5863#0#HTML" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -171,8 +176,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -222,17 +227,17 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26865673" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.27132195" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32900432" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32683983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32683983" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -287,7 +292,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2329#2383#0#HTML" expanded="false" />
+            <element signature="e#2434#3083#0#HTML" expanded="false" />
+            <element signature="e#3138#3791#0#HTML" expanded="false" />
+            <element signature="e#3845#4497#0#HTML" expanded="false" />
+            <element signature="e#4542#5863#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -295,7 +306,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="e#2329#2383#0#HTML" expanded="false" />
+            <element signature="e#2434#3083#0#HTML" expanded="false" />
+            <element signature="e#3138#3791#0#HTML" expanded="false" />
+            <element signature="e#3845#4497#0#HTML" expanded="false" />
+            <element signature="e#4542#5863#0#HTML" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#2329#2383#0#HTML" expanded="false" />
+            <element signature="e#2434#3083#0#HTML" expanded="false" />
+            <element signature="e#3138#3791#0#HTML" expanded="false" />
+            <element signature="e#3845#4497#0#HTML" expanded="false" />
+            <element signature="e#4542#5863#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -504,9 +535,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/templates/home.twig">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.77922076">
-          <caret line="164" column="28" selection-start-line="164" selection-start-column="28" selection-end-line="164" selection-end-column="28" />
-          <folding />
+        <state vertical-scroll-proportion="0.43678162">
+          <caret line="176" column="111" selection-start-line="176" selection-start-column="111" selection-end-line="176" selection-end-column="111" />
+          <folding>
+            <element signature="e#2329#2383#0#HTML" expanded="false" />
+            <element signature="e#2434#3083#0#HTML" expanded="false" />
+            <element signature="e#3138#3791#0#HTML" expanded="false" />
+            <element signature="e#3845#4497#0#HTML" expanded="false" />
+            <element signature="e#4542#5863#0#HTML" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
