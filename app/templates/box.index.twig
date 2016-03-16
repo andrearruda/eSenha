@@ -31,9 +31,18 @@
                 moment.locale('pt-br');
 
                 $('.box_lastfive li').each(function(index, item){
-                    var date_br = $(this).find('span').data('original-title');
-                    $(this).find('span').attr('data-original-title', (moment(date_br, 'YYYY-MM-DD HH:mm:ss').format('DD/MM/YYYY HH:mm') + ' - ' + moment(date_br, 'YYYY-MM-DD HH:mm:ss').fromNow()));
+                    var date_br = $(this).find('span.ticket_number_timeago').data('original-title');
+                    var li = $(this);
+
+                    li.find('span.ticket_number_timeago').attr('data-original-title', moment(date_br, 'YYYY-MM-DD HH:mm:ss').format('DD/MM/YYYY HH:mm'));
+                    li.find('span.ticket_number_timeago').html(moment(date_br, 'YYYY-MM-DD HH:mm:ss').fromNow());
+
+                    setInterval(function(){
+                        li.find('span.ticket_number_timeago').html(moment(date_br, 'YYYY-MM-DD HH:mm:ss').fromNow());
+                    }, 10000);
+
                 });
+
             });
         </script>
         <!-- CUSTOM -->
@@ -78,7 +87,8 @@
             <ul class="list-unstyled box_lastfive">
     {% for ticket in ticket_last_five %}
                 <li class="text-center">
-                    <span data-original-title="{{ ticket.getCreatedAt()|date("Y-m-d H:i:s", false) }}" data-toggle="tooltip" data-placement="top">{{ ticket.getNumber() }}</span>
+                    <span class="ticket_number">{{ ticket.getNumber() }}</span> <br />
+                    <span class="ticket_number_timeago" data-original-title="{{ ticket.getCreatedAt().date }}" data-toggle="tooltip" data-placement="top"></span>
                 </li>
     {% endfor %}
             </ul>

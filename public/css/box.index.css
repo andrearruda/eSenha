@@ -39,15 +39,21 @@
     border-bottom: dotted 1px;
     padding: 5px 0px;
     font-family: 'Lato';
-    font-size: 40px;
-    font-weight: 700;
-    color: #999999;
+    font-size: 12px;
+    font-weight: 300;
+    color: #666666;
 }
 
 .header-subdescrpition ul li:last-child{
     border-bottom: none;
 }
 
-.header-subdescrpition ul li span{
+.header-subdescrpition ul li span.ticket_number{
+    font-size: 40px;
+    font-weight: 700;
+    color: #999999;
+}
+
+.header-subdescrpition ul li span.ticket_number_timeago {
     cursor: pointer;
 }
