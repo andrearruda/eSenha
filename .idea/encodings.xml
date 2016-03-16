@@ -3,6 +3,7 @@
   <component name="Encoding">
     <file url="file://$PROJECT_DIR$/app/templates/box.index.twig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/app/templates/home.twig" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/app/templates/ticket.reset.twig" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/public/css/style.css" charset="UTF-8" />
   </component>
 </project>

@@ -1,0 +1,78 @@
+{% extends "base.twig" %}
+{% set title = ["Ticket", "Reset"]|join(' / ') %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+    {{ parent() }}
+
+        <!-- CUSTOM -->
+        <link href="/css/tickets.reset.css" rel='stylesheet' type='text/css'>
+
+        <script type="application/javascript">
+            $(document).ready(function() {
+                $('.main-option button').click(function(){
+                    $('#ticket_type_id').attr('disabled', 'disabled');
+                    $('#ticket_number').attr('disabled', 'disabled');
+
+                    window.location.href = '/ticket/reset/' + $('#ticket_type_id').val() + '/' + $('#ticket_number').val();
+                })
+            });
+        </script>
+        <!-- CUSTOM -->
+{% endblock %}
+{% block content %}
+
+    <div class="row header-descrpition">
+        <div class="col-md-4 col-md-offset-4">
+            <h1>RESET</h1>
+            <h2>OS TICKETS</h2>
+            <h3>DE ANTENDIMENTO.</h3>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-xs-12 col-md-6 col-md-offset-3">
+
+            <div class="row main-option">
+
+                <div class="col-md-5">
+                    <label for="ticket_type_id">TIPO</label>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <select id="ticket_type_id" name="ticket_type_id" class="form-control">
+                                {% for ticket_type in ticket_types %}
+                                    <option value="{{ ticket_type.getId() }}">{{ ticket_type.getType() }}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <label for="ticket_number">NÚMERO</label>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <input type="number" id="ticket_number" name="ticket_number" class="form-control text-center">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <label for="">&nbsp;</label>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-md-12">
+                            <button type="button" class="btn btn-default">OK</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+{% endblock %}

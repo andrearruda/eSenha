@@ -12,4 +12,6 @@ $app->group('/box/{ticket_type_id}/{box_id}', function(){
 $app->group('/ticket', function(){
     $this->get('/opened', 'App\Action\TicketAction:opened')->setName('ticket.opened');
     $this->get('/showed/{ticket_id}', 'App\Action\TicketAction:showed')->setName('ticket.showed');
+    $this->get('/reset', 'App\Action\TicketAction:reset')->setName('ticket.reset');
+    $this->get('/reset/{ticket_type_id}/{number}', 'App\Action\TicketAction:reset')->setName('ticket.reset');
 });

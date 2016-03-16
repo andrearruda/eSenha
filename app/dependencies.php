@@ -74,5 +74,5 @@ $container['App\Action\BoxAction'] = function ($c) {
 };
 
 $container['App\Action\TicketAction'] = function ($c) {
-    return new App\Action\TicketAction($c->get('view'), $c->get('logger'), $c->get('em'));
+    return new App\Action\TicketAction($c->get('view'), $c->get('logger'), $c->get('em'), $c->get('router'));
 };

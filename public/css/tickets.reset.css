@@ -1,0 +1,28 @@
+.header-descrpition h1{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 100;
+    font-size: 60px;
+}
+
+.header-descrpition h2{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 700;
+    font-size: 40px;
+    margin-top: -16px;
+}
+
+.header-descrpition h3{
+    margin: 0px;
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 20px;
+    margin-top: -8px;
+}
+
+.main-option label{
+    font-family: 'Lato';
+    font-weight: 300;
+    font-size: 20px;
+}
