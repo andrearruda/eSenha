@@ -44,6 +44,10 @@
     color: #999999;
 }
 
+.header-subdescrpition ul li:last-child{
+    border-bottom: none;
+}
+
 .header-subdescrpition ul li span{
     cursor: pointer;
 }

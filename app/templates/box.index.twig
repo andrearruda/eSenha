@@ -6,20 +6,34 @@
         <!-- CUSTOM -->
         <link href="/css/box.index.css" rel='stylesheet' type='text/css'>
 
+        <script src="/libs/Moment.js/moment.js"></script>
+        <script src="/libs/Moment.js/moment-with-locales.js"></script>
+
         <script type="application/javascript">
             $(document).ready(function() {
                 $('[data-toggle="tooltip"]').tooltip();
 
                 $('.btn-previous').click(function(){
+                    $('#ticket_call_option button').attr("disabled", true);
                     window.location.href = '{{ path_for('box.selected.previous', {'ticket_type_id' : ticket_type.getId(), 'box_id' : box.getId()}) }}';
                 });
 
                 $('.btn-refresh').click(function(){
+                    $('#ticket_call_option button').attr("disabled", true);
                     window.location.href = '{{ path_for('box.selected.refresh', {'ticket_type_id' : ticket_type.getId(), 'box_id' : box.getId()}) }}';
                 });
 
                 $('.btn-next').click(function(){
+                    $('#ticket_call_option button').attr("disabled", true);
                     window.location.href = '{{ path_for('box.selected.next', {'ticket_type_id' : ticket_type.getId(), 'box_id' : box.getId()}) }}';
+                });
+
+                moment.locale('pt-br');
+
+                $('.box_lastfive li').each(function(index, item){
+                    var date_br = $(this).find('span').data('original-title');
+
+                    $(this).find('span').attr('data-original-title', (moment(date_br, 'DD/MMMM/YYYY HH:mm:ss').format('DD/MM/YYYY HH:mm') + ' - ' + moment(date_br, 'DD/MMMM/YYYY hh:mm:ss').fromNow()));
                 });
             });
         </script>
@@ -39,7 +53,7 @@
     <div class="row">
         <div class="col-md-12 text-center">
 
-            <div class="btn-group" role="group" aria-label="...">
+            <div class="btn-group" id="ticket_call_option" role="group" aria-label="...">
                 <button type="button" class="btn btn-default btn-lg btn-previous" data-toggle="tooltip" data-placement="top" title="Anterior">
                     <i class="fa fa-chevron-left"></i>
                 </button>
@@ -65,7 +79,7 @@
             <ul class="list-unstyled box_lastfive">
     {% for ticket in ticket_last_five %}
                 <li class="text-center">
-                    <span title="{{ ticket.getCreatedAt()|date("d/m/Y H:i", false) }}" data-toggle="tooltip" data-placement="top">{{ ticket.getNumber() }}</span>
+                    <span data-original-title="{{ ticket.getCreatedAt()|date("d/m/Y H:i:s", false) }}" data-toggle="tooltip" data-placement="top">{{ ticket.getNumber() }}</span>
                 </li>
     {% endfor %}
             </ul>
