@@ -32,8 +32,7 @@
 
                 $('.box_lastfive li').each(function(index, item){
                     var date_br = $(this).find('span').data('original-title');
-
-                    $(this).find('span').attr('data-original-title', (moment(date_br, 'DD/MMMM/YYYY HH:mm:ss').format('DD/MM/YYYY HH:mm') + ' - ' + moment(date_br, 'DD/MMMM/YYYY hh:mm:ss').fromNow()));
+                    $(this).find('span').attr('data-original-title', (moment(date_br, 'YYYY-MM-DD HH:mm:ss').format('DD/MM/YYYY HH:mm') + ' - ' + moment(date_br, 'YYYY-MM-DD HH:mm:ss').fromNow()));
                 });
             });
         </script>
@@ -79,7 +78,7 @@
             <ul class="list-unstyled box_lastfive">
     {% for ticket in ticket_last_five %}
                 <li class="text-center">
-                    <span data-original-title="{{ ticket.getCreatedAt()|date("d/m/Y H:i:s", false) }}" data-toggle="tooltip" data-placement="top">{{ ticket.getNumber() }}</span>
+                    <span data-original-title="{{ ticket.getCreatedAt()|date("Y-m-d H:i:s", false) }}" data-toggle="tooltip" data-placement="top">{{ ticket.getNumber() }}</span>
                 </li>
     {% endfor %}
             </ul>
