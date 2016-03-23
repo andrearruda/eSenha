@@ -1,0 +1,32 @@
+{% extends "base.twig" %}
+{% set title = ["Suporte"]|join(' / ') %}
+{% block title %}{{ title }}{% endblock %}
+{% block head %}
+{{ parent() }}
+        <!-- CUSTOM -->
+            <link href="/css/suporte.css" rel='stylesheet' type='text/css'>
+        <!-- CUSTOM -->
+{% endblock %}
+{% block content %}
+    <div class="row header-descrpition">
+        <div class="col-md-4 col-md-offset-4">
+            <h1>SUPORTE</h1>
+            <h2>ENTRE EM</h2>
+            <h3>CONTATO</h3>
+        </div>
+    </div>
+
+    <hr />
+
+    <div class="row">
+        <div class="col-md-12">
+            <p>
+                Entre em contato com o nosso suporte, através dos contatos abaixo:
+            </p>
+            <ul>
+                <li>19 3239-0880</li>
+                <li>suporte@farolsign.com.br</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %}

@@ -33,4 +33,10 @@ final class HomeAction
         $this->view->render($response, 'home.twig', $data);
         return $response;
     }
+
+    public function suporte(Request $request, Response $response, $args)
+    {
+        $this->view->render($response, 'suporte.twig');
+        return $response;
+    }
 }

@@ -2,6 +2,7 @@
 // Routes
 
 $app->get('/', App\Action\HomeAction::class)->setName('homepage');
+$app->get('/suporte', 'App\Action\HomeAction:suporte')->setName('suporte');
 $app->group('/box/{ticket_type_id}/{box_id}', function(){
     $this->get('', 'App\Action\BoxAction:index')->setName('box.selected');
     $this->get('/previous', 'App\Action\BoxAction:previous')->setName('box.selected.previous');
