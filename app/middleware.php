@@ -9,6 +9,7 @@ $app->add(new \Slim\Middleware\HttpBasicAuthentication([
     'realm' => 'eSENHA',
     'secure' => false,
     'users' => [
-        'farolnet' => '293143'
+        'farolnet' => '293143',
+        'atendimento' => 'dombosco267'
     ]
 ]));
